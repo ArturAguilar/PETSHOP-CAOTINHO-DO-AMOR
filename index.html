@@ -6,320 +6,19 @@
     <title>PetShop Cãotinho do Amor</title>
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
-    <style>
-        /* Estilos CSS incorporados */
-
-        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'comfortaa', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        header {
-            background-color: rgb(94, 216, 175);
-            color: white;
-            padding: 20px 0;
-            border-bottom: 4px solid #fff;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            transition: background 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-        }
-
-        header.sticky {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-
-        header .logo {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        header .logo img {
-            max-height: 120px;
-            border-radius: 8px;
-            padding: 5px;
-        }
-
-        nav {
-            flex: 2;
-            display: flex;
-            justify-content: center;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 30px; /* Aumenta a separação entre os itens do menu */
-        }
-
-        nav ul li {
-            margin: 0;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: color 0.3s ease, border-bottom 0.3s ease;
-            padding-bottom: 5px;
-            border-bottom: 2px solid transparent;
-        }
-
-        nav ul li a:hover {
-            color: #fff;
-            border-bottom: 2px solid #fff;
-        }
-
-        .hero {
-            background-image: url('fundo.png');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            height: 80vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-        }
-
-        .hero .container {
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero h2 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .btn {
-            padding: 10px 25px;
-            background-color: #fff;
-            color: rgb(94, 216, 175);
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: 600;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: rgb(94, 216, 175);
-            color: #fff;
-        }
-
-        section {
-            padding: 60px 0;
-            text-align: center;
-        }
-
-        .light {
-            background-color: #f9f9f9;
-        }
-
-        .servicos, .produtos {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 30px;
-            gap: 20px;
-        }
-
-        .servico, .produto{
-            background-color: rgb(94, 216, 175);
-            padding: 30px;
-            width: 30%;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-            border-radius: 10px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .servico:hover, .produto:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 16px 32px rgba(0,0,0,0.3);
-        }
-
-        .servico i, .produto i {
-            font-size: 2.5rem;
-            color: rgb(94, 216, 175);
-            margin-bottom: 15px;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        form label {
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-
-        form input, form textarea {
-            padding: 10px;
-            margin-bottom: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-
-        form button {
-            padding: 10px;
-            background-color: rgb(94, 216, 175);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1.2rem;
-            font-weight: 600;
-            transition: background-color 0.3s ease;
-        }
-
-        form button:hover {
-            background-color:rgb(94, 216, 175);
-        }
-
-        footer {
-            background-color:rgb(94, 216, 175);
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-        }
-
-        footer p {
-            margin: 0;
-        }
-
-        /* Estilos da seção de dicas */
-.dicas {
-    background-color: rgb(94, 216, 175);
-    margin: 60px 0;
-    padding: 40px 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.dicas h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #ffffff;
-    text-align: center;
-}
-
-.dicas ul {
-    list-style: none;
-    padding: 0;
-}
-
-.dicas ul li {
-    margin-bottom: 20px;
-    padding: 10px;
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-}
-
-.dicas ul li:hover {
-    background-color: #e6e6e6;
-}
-
-.pet-info {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-
-.pet-info img.pet-img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
-    border: 2px solid #ddd;
-    object-fit: cover;
-}
-
-.dica-conteudo {
-    display: none;
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.dica-conteudo p {
-    font-size: 1rem;
-    text-align: left;
-}
-
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="logo.png" alt="Logo da PetShop">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#home">Início</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#produtos">Produtos</a></li>
-                <li><a href="#sobre">Sobre Nós</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
+        <img src="logo.png" alt="">
     </header>
-
-   
+    <nav>
+        <a href="#home">Início</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#sobre">Sobre Nós</a>
+        <a href="#contato">Contato</a>
+    </nav>
 
     <section id="home" class="hero">
         <div class="container">
@@ -334,7 +33,7 @@
         <ul>
             <li>
                 <div class="pet-info" onclick="toggleDica('golden')">
-                    <img src="golden.jpeg" alt="golden" class="pet-img">
+                    <img src="golden.png" alt="golden" class="pet-img">
                     <span>Golden Retriever</span>
                 </div>
                 <div class="dica-conteudo" id="golden">
@@ -344,7 +43,7 @@
 
             <li>
                 <div class="pet-info" onclick="toggleDica('basset')">
-                    <img src="basset.jpeg" alt="basset" class="pet-img">
+                    <img src="basset.png" alt="basset" class="pet-img">
                     <span>Basset Hound</span>
                 </div>
                 <div class="dica-conteudo" id="basset">
@@ -354,7 +53,7 @@
 
             <li>
                 <div class="pet-info" onclick="toggleDica('weimaraner')">
-                    <img src="weimaraner.jpeg" alt="weimaraner" class="pet-img">
+                    <img src="weimaraner.png" alt="weimaraner" class="pet-img">
                     <span>Weimaraner</span>
                 </div>
                 <div class="dica-conteudo" id="weimaraner">
@@ -364,7 +63,7 @@
 
             <li>
                 <div class="pet-info" onclick="toggleDica('poodle')">
-                    <img src="border.jpeg" alt="Poodle" class="pet-img">
+                    <img src="border.png" alt="Poodle" class="pet-img">
                     <span>Border Collie</span>
                 </div>
                 <div class="dica-conteudo" id="poodle">
@@ -374,7 +73,7 @@
 
             <li>
                 <div class="pet-info" onclick="toggleDica('dica')">
-                    <img src="outras raças.jpeg" alt="Poodle" class="pet-img">
+                    <img src="outrasraças.jpeg" alt="Poodle" class="pet-img">
                     <span>Outras Raças</span>
                 </div>
                 <div class="dica-conteudo" id="dica">
@@ -388,21 +87,28 @@
         <div class="container">
             <h2 style="color: rgb(94, 216, 175);">Nossos Serviços</h2>
             <div class="servicos">
-                <div class="servico">
-                    <i class="fas fa-bath"></i>
-                    <a href="banho e tosa.html" style="text-decoration: none; color: #333;"><h3 style="color: white;">Banho e Tosa</h3>
-                    <p style="color: white;">Deixe seu pet sempre limpo e estiloso.</p></a>
+                <div class="espace">
+                    <div class="servico">
+                        <i class="fas fa-bath"></i>
+                        <a href="banho e tosa.html" style="text-decoration: none; color: #333;"><h3 style="color: white;">Banho e Tosa</h3>
+                        <p style="color: white;">Deixe seu pet sempre limpo e estiloso.</p></a>
+                    </div>
                 </div>
-                <div class="servico">
-                    <i class="fas fa-stethoscope"></i>
-                    <a href="veterinario.html" style="text-decoration: none; color: #333;"><h3 style="color: white;">Veterinário</h3>
-                    <p style="color: white;">Consultas e atendimentos emergenciais.</p></a>
 
+                <div class="espace">
+                    <div class="servico">
+                        <i class="fas fa-stethoscope"></i>
+                        <a href="veterinario.html" style="text-decoration: none; color: #333;"><h3 style="color: white;">Veterinário</h3>
+                        <p style="color: white;">Consultas e atendimentos emergenciais.</p></a>
+                    </div>
                 </div>
-                <div class="servico">
-                    <i class="fas fa-hotel"></i>
-                    <a href="hotel.html" style="text-decoration: none; color: #333;"><h3 style="color: white;">Hotel para Pets</h3>
-                    <p style="color: white;">Um lar temporário cheio de carinho enquanto você viaja.</p></a>
+
+                <div class="espace">
+                    <div class="servico">
+                        <i class="fas fa-hotel"></i>
+                        <a href="hotel.html" style="text-decoration: none; color: #333;"><h3 style="color: white;">Hotel para Pets</h3>
+                        <p style="color: white;">Um lar temporário cheio de carinho enquanto você viaja.</p></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -412,18 +118,25 @@
         <div class="container">
             <h2 style="color: rgb(29, 165, 120);">Nossos Produtos</h2>
             <div class="produtos">
-                <div class="produto">
-                    <a href="raçoes.html" style="text-decoration: none; color: #333;"><h3 style="color: white;">Ração Premium</h3>
-                    <p style="color: white;">Nutrição de alta qualidade para o seu pet.</p></a>
+                <div class="espace">
+                    <div class="produto">
+                        <a href="raçoes.html" style="text-decoration: none; color: #333;"><h3 style="color: white;">Ração Premium</h3>
+                        <p style="color: white;">Nutrição de alta qualidade para o seu pet.</p></a>
+                    </div>
                 </div>
-                <div class="produto">
-                    <a href="brinquedo e acessorio.html" style="text-decoration: none; color: #333;"><h3 style="color: white;">Brinquedo e Acessório</h3>
-                    <p  style="color: white;">Incentive o entretenimento e a saúde mental dos animais.</p></a>
-                </div>
-                <div class="produto">
-                    <a href="higiene.html" style="text-decoration: none; color: #333;"><h3 style="color: white;">Higiene</h3>
-                    <p  style="color: white;">Os melhores produtos para manter seu pet limpo e saudável.</p></a>
 
+                <div class="espace">
+                    <div class="produto">
+                        <a href="brinquedo e acessorio.html" style="text-decoration: none; color: #333;"><h3 style="color: white;">Brinquedo e Acessório</h3>
+                        <p  style="color: white;">Incentive o entretenimento e a saúde mental dos animais.</p></a>
+                    </div>
+                </div>
+
+                <div class="espace">
+                    <div class="produto">
+                        <a href="higiene.html" style="text-decoration: none; color: #333;"><h3 style="color: white;">Higiene</h3>
+                        <p  style="color: white;">Os melhores produtos para manter seu pet limpo e saudável.</p></a>
+                    </div>
                 </div>
             </div>
         </div>
