@@ -187,11 +187,13 @@
             box-shadow: 0 16px 32px rgba(0,0,0,0.3);
         }
 
-        .espace{
+        .produtos > .espace{
             padding: 30px;
         }
 
-        
+        .servicos > .espace{
+            padding: 30px;
+        }
 
         form {
             display: flex;
