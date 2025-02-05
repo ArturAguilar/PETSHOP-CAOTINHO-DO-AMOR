@@ -59,16 +59,25 @@
     </style>
 </head>
 <body>
-        <header>
-            <img src="logo.png" alt="">
-        </header>
-        <nav>
-            <a href="#home">Início</a>
-            <a href="#servicos">Serviços</a>
-            <a href="#produtos">Produtos</a>
-            <a href="#sobre">Sobre Nós</a>
-            <a href="#contato">Contato</a>
+    <header>
+        <nav class="navegation">
+            <img class="logo" src="logo.png" alt="logo" width="200" height="100">
+            <!--<a href="#" class="logo"><span>ANAC</span>AMBIENTAL</a>-->
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" onclick="fecharMenu()">Início</a></li>
+                <li class="nav-item"><a href="#servicos" onclick="fecharMenu()">Serviços</a></li>
+                <li class="nav-item"><a href="#produtos" onclick="fecharMenu()">Produtos</a></li>
+                <li class="nav-item"><a href="#sobre" onclick="fecharMenu()">Sobre Nós</a></li>
+                <li class="nav-item"><a href="#contato" onclick="fecharMenu()">Contato</a></li>
+                <!--<i class='bx bx-search'></i>-->
+            </ul>
+            <div class="menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
+    </header>
 
 
     <section id="home" class="hero">
@@ -76,6 +85,7 @@
             <h2>Seu Pet Merece o Melhor</h2>
             <p>Descubra nossos serviços e produtos pensados com carinho para o bem-estar do seu amigo de quatro patas.</p>
             <a href="#servicos" class="btn">Veja Nossos Serviços</a>
+            <a href="#produtos" class="btn">Veja Nossos Produtos</a>
         </div>
     </section>
 
@@ -149,7 +159,9 @@
                 <div class="espace">
                     <div class="servico">
                         <i class="fas fa-stethoscope"></i>
-                        <a href="veterinario.html" style="text-decoration: none; color: #333;"><h3 style="color: white;">Veterinário</h3>
+                        <header{
+                            position: fixed
+                        }a href="veterinario.html" style="text-decoration: none; color: #333;"><h3 style="color: white;">Veterinário</h3>
                         <p style="color: white;">Consultas e atendimentos emergenciais.</p></a>
                     </div>
                 </div>
@@ -224,8 +236,25 @@
         </div>
     </footer>
 
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script>
+        const menu = document.querySelector('.menu');
+        const NavMenu = document.querySelector('.nav-menu');
+
+        menu.addEventListener('click', () => {
+            menu.classList.toggle('ativo');
+            NavMenu.classList.toggle('ativo');
+        });
+
+        function fecharMenu() {
+            document.querySelector(".nav-menu").classList.remove("ativo");
+            document.querySelector(".menu").classList.remove("ativo");
+
+            menu.addEventListener('click' , () => {
+                menu.classList.toggle('desativar');
+                NavMenu.classList.toggle('desativar');
+                });
+}
+    
         // Menu Fixo
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');

@@ -79,15 +79,24 @@
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="">
+        <nav class="navegation">
+            <img class="logo" src="logo.png" alt="logo" width="200" height="100">
+            <!--<a href="#" class="logo"><span>ANAC</span>AMBIENTAL</a>-->
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" onclick="fecharMenu()">Início</a></li>
+                <li class="nav-item"><a href="index.html" onclick="fecharMenu()">Serviços</a></li>
+                <li class="nav-item"><a href="index.html" onclick="fecharMenu()">Produtos</a></li>
+                <li class="nav-item"><a href="index.html" onclick="fecharMenu()">Sobre Nós</a></li>
+                <li class="nav-item"><a href="index.html" onclick="fecharMenu()">Contato</a></li>
+                <!--<i class='bx bx-search'></i>-->
+            </ul>
+            <div class="menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
     </header>
-    <nav>
-        <a href="index.html">Início</a>
-        <a href="index.html">Serviços</a>
-        <a href="index.html">Produtos</a>
-        <a href="index.html">Sobre Nós</a>
-        <a href="index.html">Contato</a>
-    </nav>
 
     <div class="container">
         <h1>Rações Premium</h1>
@@ -214,6 +223,23 @@
     </div>
 
     <script>
+        const menu = document.querySelector('.menu');
+        const NavMenu = document.querySelector('.nav-menu');
+
+        menu.addEventListener('click', () => {
+            menu.classList.toggle('ativo');
+            NavMenu.classList.toggle('ativo');
+        });
+
+        function fecharMenu() {
+            document.querySelector(".nav-menu").classList.remove("ativo");
+            document.querySelector(".menu").classList.remove("ativo");
+
+            menu.addEventListener('click' , () => {
+                menu.classList.toggle('desativar');
+                NavMenu.classList.toggle('desativar');
+                });
+}
         let currentIndex = 0;
         const items = document.querySelectorAll('.carousel-item');
 
