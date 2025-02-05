@@ -191,6 +191,10 @@
             padding: 30px;
         }
 
+        .servicos > .espace{
+            padding: 30px;
+        }
+
         form {
             display: flex;
             flex-direction: column;
