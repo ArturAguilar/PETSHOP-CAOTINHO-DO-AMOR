@@ -197,7 +197,7 @@ color: #555;
 }
 
 input[type="text"], input[type="datetime-local"], input[type="tel"], textarea {
-width: 100%;
+width: 95%;
 padding: 10px;
 border: 1px solid #967a7a;
 border-radius: 4px;

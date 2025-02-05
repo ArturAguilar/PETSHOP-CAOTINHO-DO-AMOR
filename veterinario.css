@@ -144,7 +144,7 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 footer p {
@@ -152,8 +152,8 @@ footer p {
 }
 
 .container {
-    max-width: 600px;
-    margin: 50px auto;
+    max-width: 1200px;
+    margin: 50px 25px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgb(94, 216, 175);
@@ -184,11 +184,11 @@ label {
 }
 
 input[type="text"], input[type="datetime-local"], input[type="tel"], select {
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 100%;
+width: 95%;
+padding: 10px;
+border: 1px solid #967a7a;
+border-radius: 4px;
+font-size: 1rem;
 }
 
 .full-width {
